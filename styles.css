@@ -1,0 +1,123 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #2e2e2e; /* Dark background for contrast */
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* Container */
+.container {
+  text-align: center;
+  max-width: 500px;
+  width: 100%;
+  padding: 30px;
+  box-sizing: border-box;
+  background: #3c3c3c; /* Dark card background */
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+}
+
+/* Title */
+.title {
+  font-size: 2.5rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: #fdd835; /* Gold text for elegance */
+}
+
+/* Coin Container */
+.coin-container {
+  perspective: 1000px;
+  margin: 20px auto;
+  width: 200px;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.coin {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+}
+
+.coin div {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #fff;
+  backface-visibility: hidden;
+}
+
+.coin .front {
+  background: radial-gradient(circle, #ffd700, #c99700);
+  color: #333;
+  border: 5px solid #ffd700; /* Gold rim */
+}
+
+.coin .back {
+  background: radial-gradient(circle, #ffd700, #c99700);
+  color: #333;
+  border: 5px solid #ffd700;
+  transform: rotateY(180deg);
+}
+
+/* Button */
+.btn, .go-to-channel-btn {
+  padding: 14px 28px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #fff;
+  background-color: #fdd835; /* Gold button */
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 20px;
+  width: 100%;
+}
+
+.btn:hover, .go-to-channel-btn:hover {
+  background-color: #d4a017; /* Slightly darker gold */
+  transform: scale(1.05);
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .coin-container {
+      width: 150px;
+      height: 150px;
+  }
+
+  .coin {
+      width: 100%;
+      height: 100%;
+  }
+
+  .title {
+      font-size: 2rem;
+  }
+
+  .btn, .go-to-channel-btn {
+      padding: 12px 20px;
+  }
+}
